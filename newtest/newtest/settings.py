@@ -17,6 +17,9 @@ ADMIN_MEDIA_PREFIX = '/admin/'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'h3pt+sqj$gk(3=ds$ui0nx@s7o)cr(u4fghv57z6!8onb+!6-d'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -99,13 +102,3 @@ STATIC_ROOT = '/opt/venv/static/'
 #    os.path.join(BASE_DIR, "static"),
 #    '/opt/webapps/static/',
 #)
-
-try:
-    import local_settings
-except ImportError:
-    print (""" 
-          -------------------------------------------------------------------------
-          You need to create a local_settings.py file which needs to contain at least
-          database connection information.
-          -------------------------------------------------------------------------
-          """)
