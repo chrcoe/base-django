@@ -24,4 +24,16 @@ To use local_settings.py create this in the same directory as settings.py and pu
     except ImportError:
         pass
 
+
 This project already has this setup and the gitignore file is making sure these local settings stay on your machine as it will most likely have the secret keys etc.
+
+Using newtestapp.service in conjunction with systemd:
+
+    systemctl enable newtestapp.service
+    systemctl start newtestapp.service
+
+Check status with:
+
+    systemctl status newtestapp.service
+
+
