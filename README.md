@@ -7,7 +7,7 @@ The app uses:
 
 * Python 2.7 
 * Django 1.7
-* psycopg2 2.5.4 (postgresql connector) [Windows download page](http://example.com/ "psycopg2-windows")
+* psycopg2 2.5.4 (postgresql connector) [Windows download page](http://www.stickpeople.com/projects/python/win-psycopg/ "psycopg2-windows")
 
 If you are on Windows, make sure you download the compiled packages for your architecture as well as verifying the Python version it is for.
 
