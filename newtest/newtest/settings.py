@@ -27,15 +27,20 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+USER_APPS = (
+    'polls',
+)
+
+BUILT_IN_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls',
 )
+
+INSTALLED_APPS = USER_APPS + BUILT_IN_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -69,8 +74,6 @@ DATABASES = {
         'USER': 'dwa',
         'PASSWORD': 'dwa_test01!',
         'HOST': '127.0.0.1',
-        #'HOST': 'localhost',
-        #'HOST': '10.13.37.108',
         'PORT': '5432',
     }
 }
@@ -95,10 +98,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/opt/venv/static/'
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-#    '/opt/webapps/static/',
-#)
 
 try:
     from local_settings import *

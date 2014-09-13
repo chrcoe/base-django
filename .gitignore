@@ -2,3 +2,4 @@
 *.pyo
 
 local_settings.py
+django_db

@@ -29,6 +29,7 @@ This project already has this setup and the gitignore file is making sure these 
 
 Using newtestapp.service in conjunction with systemd:
 
+    cp newtestapp.service /etc/systemd/system
     systemctl enable newtestapp.service
     systemctl start newtestapp.service
 
@@ -36,4 +37,15 @@ Check status with:
 
     systemctl status newtestapp.service
 
+To put the static files in the right place, make sure that 'django.contrib.staticfiles' is listed under INSTALLED_APPS and name a STATIC_ROOT variable in settings.py
 
+Then run:
+
+    ./manage.py collectstatic
+
+Use this [documentation page](https://docs.djangoproject.com/en/1.7/ref/contrib/staticfiles/ "static files docs") for future reference
+The location set using STATIC_ROOT should be accessible by the user running the command.  What it does is copy all of the static files to that location to be served up by whatever proxy is serving up static files (nginx, etc.)
+
+To create an admin user:
+
+    ./manage.py createsuperuser --username=joe --email=joe@example.com
